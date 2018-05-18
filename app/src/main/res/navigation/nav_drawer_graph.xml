@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/navFirstFragment"
+        android:name="com.aptus.navigatioarchitecture.drawerandoverfloemenu.NavFirstFragment"
+        android:label="fragment_nav_first"
+        tools:layout="@layout/fragment_nav_first" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.aptus.navigatioarchitecture.drawerandoverfloemenu.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+</navigation>

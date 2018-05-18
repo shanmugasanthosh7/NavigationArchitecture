@@ -8,14 +8,34 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="First fragment"
-        android:textSize="40sp"/>
+        android:textSize="40sp" />
 
     <Button
         android:id="@+id/navigateToSecondFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"/>
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/navigateDrawerActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Navigate drawer activity" />
+
+    <Button
+        android:id="@+id/overFlowMenuActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="overflow menu activity" />
+
 </LinearLayout>
