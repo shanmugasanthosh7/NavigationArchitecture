@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity(), NavigationFragment.OnFragmentInteracti
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
-    override fun onSupportNavigateUp(): Boolean {// Up button will on this method
+    override fun onSupportNavigateUp(): Boolean {// Up button will work on this method
         return Navigation.findNavController(this, R.id.my_nav_host_fragment).navigateUp()
     }
 }
