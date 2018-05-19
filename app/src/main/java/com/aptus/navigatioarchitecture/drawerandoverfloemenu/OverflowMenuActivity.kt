@@ -17,7 +17,7 @@ class OverflowMenuActivity : AppCompatActivity(), HomeMenuFragment.OnFragmentInt
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_over_flow_menu)
         setSupportActionBar(toolBar)
-        title = "Over Flow Menu"
+        title = "Overflow Menu Activity"
         supportActionBar!!.setDisplayHomeAsUpEnabled(false)
         supportActionBar!!.setDisplayShowTitleEnabled(false)
     }
