@@ -1,4 +1,4 @@
-# NavigatioArchitecture
+# Navigation Architecture
 Android development tool - Navigation Architecture Component
 
 In Google I/O 2018, they announced the new modern Navigation Architecture Component. Its bundled in Android Jetpack's Architecture section.
