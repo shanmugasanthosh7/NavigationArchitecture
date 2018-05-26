@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/bundleFragment">
+
+    <fragment
+        android:id="@+id/bundleFragment"
+        android:name="com.aptus.navigatioarchitecture.passdata.BundleFragment"
+        android:label="fragment_bundle"
+        tools:layout="@layout/fragment_bundle">
+        <action
+            android:id="@+id/action_bundleFragment_to_passBundleFragment"
+            app:destination="@id/passBundleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passBundleFragment"
+        android:name="com.aptus.navigatioarchitecture.passdata.PassBundleFragment"
+        android:label="fragment_pass_bundle"
+        tools:layout="@layout/fragment_pass_bundle">
+        <argument
+            android:name="name"
+            android:defaultValue="Android" />
+    </fragment>
+</navigation>

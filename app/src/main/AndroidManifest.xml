@@ -18,6 +18,8 @@
         </activity>
         <activity android:name=".drawerandoverfloemenu.NavigationDrawerActivity"/>
         <activity android:name=".drawerandoverfloemenu.OverflowMenuActivity" />
+        <activity android:name=".passdata.BundleActivity" />
+        <activity android:name=".passdatatypesafe.TypeSafeDataActivity" />
     </application>
 
 </manifest>
