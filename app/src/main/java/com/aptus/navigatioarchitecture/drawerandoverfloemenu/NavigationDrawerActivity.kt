@@ -16,7 +16,7 @@ class NavigationDrawerActivity : AppCompatActivity(),HomeFragment.OnFragmentInte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_navigation_drawer)
         setSupportActionBar(toolBar)
-        title = "Navigation Drawer And Overflow Menu"
+        title = "Navigation Drawer Activity"
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setDisplayShowTitleEnabled(false)
         setUpDrawerToggle()
