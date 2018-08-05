@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     app:startDestination="@id/typeSafeFragment">
 
@@ -8,7 +8,7 @@
         android:id="@+id/typeSafeFragment"
         android:name="com.aptus.navigatioarchitecture.passdatatypesafe.TypeSafeFragment"
         android:label="fragment_type_safe"
-        tools:layout="@layout/fragment_type_safe" >
+        tools:layout="@layout/fragment_type_safe">
         <action
             android:id="@+id/action_typeSafeFragment_to_passTypeSafeFragment"
             app:destination="@id/passTypeSafeFragment" />
@@ -18,11 +18,11 @@
         android:id="@+id/passTypeSafeFragment"
         android:name="com.aptus.navigatioarchitecture.passdatatypesafe.PassTypeSafeFragment"
         android:label="fragment_pass_type_safe"
-        tools:layout="@layout/fragment_pass_type_safe" >
+        tools:layout="@layout/fragment_pass_type_safe">
         <argument
             android:name="name"
             android:defaultValue="Android"
-            app:type="string" />
+            app:argType="string" />
     </fragment>
 
 </navigation>

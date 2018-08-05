@@ -1,7 +1,7 @@
 package com.aptus.navigatioarchitecture.passdatatypesafe
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.aptus.navigatioarchitecture.R
 
 class TypeSafeDataActivity : AppCompatActivity() {

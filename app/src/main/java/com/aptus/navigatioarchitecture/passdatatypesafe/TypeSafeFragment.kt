@@ -2,7 +2,7 @@ package com.aptus.navigatioarchitecture.passdatatypesafe
 
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,9 +25,9 @@ class TypeSafeFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         passTypeSafe.setOnClickListener {
-            val action = TypeSafeFragmentDirections.action_typeSafeFragment_to_passTypeSafeFragment()
+            val action = TypeSafeFragmentDirections.actionTypeSafeFragmentToPassTypeSafeFragment()
             action.setName("Santhosh")
-            Navigation.findNavController(activity!!,R.id.my_nav_host_fragment).navigate(action)
+            Navigation.findNavController(activity!!, R.id.my_nav_host_fragment).navigate(action)
         }
     }
 }

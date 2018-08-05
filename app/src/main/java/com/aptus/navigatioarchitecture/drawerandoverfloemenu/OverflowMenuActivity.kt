@@ -2,7 +2,7 @@ package com.aptus.navigatioarchitecture.drawerandoverfloemenu
 
 import android.net.Uri
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
@@ -11,7 +11,8 @@ import androidx.navigation.ui.NavigationUI
 import com.aptus.navigatioarchitecture.R
 import kotlinx.android.synthetic.main.activity_over_flow_menu.*
 
-class OverflowMenuActivity : AppCompatActivity(), HomeMenuFragment.OnFragmentInteractionListener, MenuItemOne.OnFragmentInteractionListener {
+class OverflowMenuActivity : AppCompatActivity(), HomeMenuFragment.OnFragmentInteractionListener,
+        MenuItemOne.OnFragmentInteractionListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +29,8 @@ class OverflowMenuActivity : AppCompatActivity(), HomeMenuFragment.OnFragmentInt
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        NavigationUI.onNavDestinationSelected(item!!, Navigation.findNavController(this, R.id.navOverFlowMenuActivity))
+        NavigationUI.onNavDestinationSelected(item!!,
+                Navigation.findNavController(this, R.id.navOverFlowMenuActivity))
         return super.onOptionsItemSelected(item)
     }
 
