@@ -20,8 +20,11 @@ class NavigationDrawerActivity : AppCompatActivity(), HomeFragment.OnFragmentInt
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setDisplayShowTitleEnabled(false)
         setUpDrawerToggle()
-        NavigationUI.setupWithNavController(navView,
-                Navigation.findNavController(this, R.id.navDrawerActivity))
+        val drawerNavController = Navigation.findNavController(this, R.id.navDrawerActivity)
+        NavigationUI.setupWithNavController(navView, drawerNavController)
+        drawerNavController.addOnNavigatedListener { controller, destination ->
+            // Update UI visibility and other events
+        }
     }
 
     private fun setUpDrawerToggle() {
