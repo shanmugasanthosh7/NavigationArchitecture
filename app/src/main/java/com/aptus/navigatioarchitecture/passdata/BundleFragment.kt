@@ -11,8 +11,10 @@ import kotlinx.android.synthetic.main.fragment_bundle.*
 
 class BundleFragment : Fragment() {
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_bundle, container, false)
     }
@@ -21,9 +23,13 @@ class BundleFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         val bundle = Bundle()
         bundle.putString("name", "Santhosh")
-        passBundle.setOnClickListener(Navigation
-                .createNavigateOnClickListener(R.id.action_bundleFragment_to_passBundleFragment,
-                        bundle))
+        passBundle.setOnClickListener(
+            Navigation
+                .createNavigateOnClickListener(
+                    R.id.action_bundleFragment_to_passBundleFragment,
+                    bundle
+                )
+        )
 
         //Or
 

@@ -4,12 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.Navigation
 
-class MainActivity : AppCompatActivity(), NavigationFragment.OnFragmentInteractionListener,
-        BlankFragment.OnFragmentInteractionListener {
+class MainActivity : AppCompatActivity(), NavigationFragment.OnFragmentInteractionListener {
 
     override fun onFragmentInteraction() {
         Navigation.findNavController(this, R.id.my_nav_host_fragment)
-                .navigate(R.id.action_navigationFragment_to_blankFragment)
+            .navigate(R.id.action_navigationFragment_to_blankFragment)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_nested_graph"
+    app:startDestination="@id/nestedDestination">
+
+    <fragment
+        android:id="@+id/nestedDestination"
+        android:name="com.aptus.navigatioarchitecture.nestedgraph.NestedDestination"
+        android:label="fragment_nested_destination"
+        tools:layout="@layout/fragment_nested_destination">
+        <action
+            android:id="@+id/action_nestedDestination_to_subGraphStep1"
+            app:destination="@id/subGraphStep" />
+        <action
+            android:id="@+id/action_nestedDestination_to_subGraph3"
+            app:destination="@id/subGraph3" />
+    </fragment>
+    <fragment
+        android:id="@+id/subGraph3"
+        android:name="com.aptus.navigatioarchitecture.nestedgraph.SubGraph3"
+        android:label="fragment_sub_graph3"
+        tools:layout="@layout/fragment_sub_graph3" />
+    <navigation
+        android:id="@+id/subGraphStep"
+        app:startDestination="@id/subGraphStep1">
+        <fragment
+            android:id="@+id/subGraphStep1"
+            android:name="com.aptus.navigatioarchitecture.nestedgraph.SubGraphStep1"
+            android:label="fragment_sub_graph_step1"
+            tools:layout="@layout/fragment_sub_graph_step1">
+            <action
+                android:id="@+id/action_subGraphStep1_to_subGraphStep2"
+                app:destination="@id/subGraphStep2" />
+        </fragment>
+        <fragment
+            android:id="@+id/subGraphStep2"
+            android:name="com.aptus.navigatioarchitecture.nestedgraph.SubGraphStep2"
+            android:label="fragment_sub_graph_step2"
+            tools:layout="@layout/fragment_sub_graph_step2" />
+    </navigation>
+</navigation>

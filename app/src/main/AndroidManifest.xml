@@ -22,6 +22,7 @@
         <activity android:name=".drawerandoverfloemenu.OverflowMenuActivity" />
         <activity android:name=".passdata.BundleActivity" />
         <activity android:name=".passdatatypesafe.TypeSafeDataActivity" />
+        <activity android:name=".nestedgraph.NestedGraphActivity" />
     </application>
 
 </manifest>

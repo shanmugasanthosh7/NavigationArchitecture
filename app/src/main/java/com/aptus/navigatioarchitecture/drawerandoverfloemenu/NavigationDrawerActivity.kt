@@ -10,7 +10,7 @@ import com.aptus.navigatioarchitecture.R
 import kotlinx.android.synthetic.main.activity_navigation_drawer.*
 
 class NavigationDrawerActivity : AppCompatActivity(), HomeFragment.OnFragmentInteractionListener,
-        NavFirstFragment.OnFragmentInteractionListener {
+    NavFirstFragment.OnFragmentInteractionListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,8 +28,10 @@ class NavigationDrawerActivity : AppCompatActivity(), HomeFragment.OnFragmentInt
     }
 
     private fun setUpDrawerToggle() {
-        val mDrawerToggle = object : ActionBarDrawerToggle(this, navDrawer, toolBar,
-                R.string.open, R.string.close) {}
+        val mDrawerToggle = object : ActionBarDrawerToggle(
+            this, navDrawer, toolBar,
+            R.string.open, R.string.close
+        ) {}
         navDrawer.addDrawerListener(mDrawerToggle)
         mDrawerToggle.syncState()
     }

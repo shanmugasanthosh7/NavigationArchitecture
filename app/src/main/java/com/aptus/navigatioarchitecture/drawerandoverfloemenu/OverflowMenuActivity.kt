@@ -12,7 +12,7 @@ import com.aptus.navigatioarchitecture.R
 import kotlinx.android.synthetic.main.activity_over_flow_menu.*
 
 class OverflowMenuActivity : AppCompatActivity(), HomeMenuFragment.OnFragmentInteractionListener,
-        MenuItemOne.OnFragmentInteractionListener {
+    MenuItemOne.OnFragmentInteractionListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,8 +29,10 @@ class OverflowMenuActivity : AppCompatActivity(), HomeMenuFragment.OnFragmentInt
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        NavigationUI.onNavDestinationSelected(item!!,
-                Navigation.findNavController(this, R.id.navOverFlowMenuActivity))
+        NavigationUI.onNavDestinationSelected(
+            item!!,
+            Navigation.findNavController(this, R.id.navOverFlowMenuActivity)
+        )
         return super.onOptionsItemSelected(item)
     }
 
