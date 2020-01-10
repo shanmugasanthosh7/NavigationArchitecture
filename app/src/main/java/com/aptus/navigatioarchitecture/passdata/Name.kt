@@ -3,7 +3,7 @@ package com.aptus.navigatioarchitecture.passdata
 import android.os.Parcel
 import android.os.Parcelable
 
-data class Name(val firstname: String, val lastName: String) : Parcelable {
+data class Name(val firstname: String?, val lastName: String?) : Parcelable {
 
     constructor(parcel: Parcel) : this(
         parcel.readString(),
