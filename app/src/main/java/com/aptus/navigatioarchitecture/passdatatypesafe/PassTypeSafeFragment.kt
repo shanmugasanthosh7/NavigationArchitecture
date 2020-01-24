@@ -25,7 +25,7 @@ class PassTypeSafeFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        val name = PassTypeSafeFragmentArgs.fromBundle(arguments).name
+        val name = arguments?.let { PassTypeSafeFragmentArgs.fromBundle(it).name }
         passTypeValue.text = name
     }
 }

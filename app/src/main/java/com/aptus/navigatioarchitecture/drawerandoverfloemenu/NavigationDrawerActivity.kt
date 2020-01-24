@@ -22,7 +22,7 @@ class NavigationDrawerActivity : AppCompatActivity(), HomeFragment.OnFragmentInt
         setUpDrawerToggle()
         val drawerNavController = Navigation.findNavController(this, R.id.navDrawerActivity)
         NavigationUI.setupWithNavController(navView, drawerNavController)
-        drawerNavController.addOnNavigatedListener { controller, destination ->
+        drawerNavController.addOnDestinationChangedListener { _, _, _ ->
             // Update UI visibility and other events
         }
     }
