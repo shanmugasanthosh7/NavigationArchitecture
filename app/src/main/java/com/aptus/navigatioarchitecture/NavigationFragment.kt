@@ -19,8 +19,8 @@ class NavigationFragment : Fragment() {
     private var listener: OnFragmentInteractionListener? = null
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_navigation, container, false)
@@ -32,19 +32,19 @@ class NavigationFragment : Fragment() {
             onButtonPressed()
         }
         navigateDrawerActivity.setOnClickListener {
-            startActivity(Intent(context!!, NavigationDrawerActivity::class.java))
+            startActivity(Intent(requireContext(), NavigationDrawerActivity::class.java))
         }
         overFlowMenuActivity.setOnClickListener {
-            startActivity(Intent(context!!, OverflowMenuActivity::class.java))
+            startActivity(Intent(requireContext(), OverflowMenuActivity::class.java))
         }
         bundleActivity.setOnClickListener {
-            startActivity(Intent(context!!, BundleActivity::class.java))
+            startActivity(Intent(requireContext(), BundleActivity::class.java))
         }
         typeSafeActiviy.setOnClickListener {
-            startActivity(Intent(context!!, TypeSafeDataActivity::class.java))
+            startActivity(Intent(requireContext(), TypeSafeDataActivity::class.java))
         }
         nestedGraphActiviy.setOnClickListener {
-            startActivity(Intent(context!!, NestedGraphActivity::class.java))
+            startActivity(Intent(requireContext(), NestedGraphActivity::class.java))
         }
     }
 
@@ -58,8 +58,8 @@ class NavigationFragment : Fragment() {
             listener = context
         } else {
             throw RuntimeException(
-                context.toString() +
-                        " must implement OnFragmentInteractionListener"
+                    context.toString() +
+                            " must implement OnFragmentInteractionListener"
             )
         }
     }
@@ -74,6 +74,7 @@ class NavigationFragment : Fragment() {
     }
 
     companion object {
-        @JvmStatic fun newInstance() = NavigationFragment()
+        @JvmStatic
+        fun newInstance() = NavigationFragment()
     }
 }

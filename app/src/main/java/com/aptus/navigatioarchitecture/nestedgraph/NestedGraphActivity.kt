@@ -13,10 +13,8 @@ class NestedGraphActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
-    override fun onSupportNavigateUp(): Boolean {// Up button will work on this method
-        return Navigation.findNavController(
-            this,
-            R.id.nested_graph_host_fragment
-        ).navigateUp()
+    override fun onSupportNavigateUp(): Boolean {
+        // Up button will work on this method
+        return Navigation.findNavController(this, R.id.nested_graph_host_fragment).navigateUp()
     }
 }

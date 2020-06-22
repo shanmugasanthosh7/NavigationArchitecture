@@ -28,8 +28,8 @@ class TypeSafeFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         passTypeSafe.setOnClickListener {
             val action = TypeSafeFragmentDirections.actionTypeSafeFragmentToPassTypeSafeFragment()
-            action.setName("Santhosh")
-            Navigation.findNavController(activity!!, R.id.my_nav_host_fragment).navigate(action)
+            action.name = "Santhosh"
+            Navigation.findNavController(requireActivity(), R.id.my_nav_host_fragment).navigate(action)
         }
     }
 }
